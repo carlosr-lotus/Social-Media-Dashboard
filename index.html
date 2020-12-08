@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Link to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Link to CSS File -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Frontend Mentor | Social Media Dashboard</title>
+
+</head>
+
+<body data-js="body-bg">
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+
+      <div class="header-main">
+        <h1 data-js="dark-mode-text">Social Media Dashboard</h1>
+        <p>Total Followers: 23,004</p>
+      </div>
+
+      <!-- Line only available for mobile screen sizes -->
+      <div class="crossline"></div>
+
+      <!-- Dark/Light Mode Toggle Button -->
+      <div class="dark-mode-container">
+        <p>Dark Mode</p>
+        <div class="toggle-container" onclick="this.classList.toggle('active')" data-js="toggle-btn">
+          <div class="toggle-ball"></div>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+      <div class="card-info-container">
+
+        <!-- FACEBOOK CARD -->
+        <div class="card-info facebook-border" data-js="card-info-box">
+          <div class="user-info" data-js="page-text">
+            <img src="./images/icon-facebook.svg" alt="icon-facebook">
+            @nathanf
+          </div>
+          <h2 data-js="dark-mode-text">1987</h2>
+          <span data-js="page-text">Followers</span>
+          <p class="green"><img src="./images/icon-up.svg" alt="icon-up"> 12 Today</p>
+        </div>
+
+        <!-- TWITTER CARD -->
+        <div class="card-info twitter-border" data-js="card-info-box">
+          <div class="user-info" data-js="page-text">
+            <img src="./images/icon-twitter.svg" alt="icon-twitter">
+            @nathanf
+          </div>
+          <h2 data-js="dark-mode-text">1044</h2>
+          <span data-js="page-text">Followers</span>
+          <p class="green"><img src="./images/icon-up.svg" alt="icon-up">99 Today</p>
+        </div>
+
+        <!-- INSTAGRAM CARD -->
+        <div class="card-info instagram-border" data-js="card-info-box">
+          <div class="user-info instagram-user-info" data-js="page-text">
+            <img src="./images/icon-instagram.svg" alt="icon-instagram">
+            @realnathanf
+          </div>
+          <h2 data-js="dark-mode-text">11k</h2>
+          <span data-js="page-text">Followers</span>
+          <p class="green"><img src="./images/icon-up.svg" alt="icon-up">1099 Today</p>
+        </div>
+
+        <div class="card-info youtube-border" data-js="card-info-box">
+          <div class="user-info" data-js="page-text">
+            <img src="./images/icon-youtube.svg" alt="icon-youtube">
+            Nathan F.
+          </div>
+          <h2 data-js="dark-mode-text">8239</h2>
+          <span data-js="page-text">Subscribers</span>
+          <!-- Class = "Red" -->
+          <p class="red"><img src="./images/icon-down.svg" alt="icon-down">144 Today</p>
+        </div>
+
+      </div>
+
+      <!-- ***** OVERVIEW MAIN SECTION!! ***** -->
+      <h2 class="overview-header" data-js="dark-mode-text">Overview - Today</h2>
+      <div class="overview-container">
+
+        <!-- *** FACEBOOK BOX 1 *** -->
+        <div class="overview-box" data-js="card-info-box">
+
+          <!-- Info Box Flex Content -->
+          <div class="box-section-1" data-js="page-text">
+            <h3>Page Views</h3>
+            <img src="./images/icon-facebook.svg" alt="icon-facebook">
+          </div>
+
+          <!-- Info Box Flex Content -->
+          <div class="box-section-2">
+            <h3 class="overview-box-number" data-js="dark-mode-text">87</h3>
+            <p class="green"><img src="./images/icon-up.svg" alt="icon-uo">3%</p>
+
+          </div>
+        </div>
+
+        <!-- *** FACEBOOK BOX 2 *** -->
+        <div class="overview-box" data-js="card-info-box">
+
+          <div class="box-section-1" data-js="page-text">
+            <h3>Likes</h3>
+            <img src="./images/icon-facebook.svg" alt="icon-facebook">
+          </div>
+
+          <div class="box-section-2">
+            <h3 class="overview-box-number" data-js="dark-mode-text">52</h3>
+            <p class="red"><img src="./images/icon-down.svg" alt="icon-down">2%</p>
+          </div>
+
+        </div>
+
+        <!-- *** INSTAGRAM BOX 1 *** -->
+        <div class="overview-box" data-js="card-info-box">
+
+          <div class="box-section-1" data-js="page-text">
+            <h3>Likes</h3>
+            <img src="./images/icon-instagram.svg" alt="instagram-icon">
+          </div>
+
+          <div class="box-section-2">
+            <h3 class="overview-box-number" data-js="dark-mode-text">5462</h3>
+            <p class="green greater-width"><img src="./images/icon-up.svg" alt="icon-up">2257%</p>
+          </div>
+
+        </div>
+
+        <!-- *** INSTAGRAM BOX 2 *** -->
+        <div class="overview-box" data-js="card-info-box">
+          <div class="box-section-1" data-js="page-text">
+            <h3>Profile Views</h3>
+            <img src="./images/icon-instagram.svg" alt="instagram-icon">
+          </div>
+
+          <div class="box-section-2">
+            <h3 class="overview-box-number" data-js="dark-mode-text">52k</h3>
+            <p class="green greater-width"><img src="./images/icon-up.svg" alt="icon-up">1375%</p>
+          </div>
+        </div>
+
+
+        <!-- *** TWITTER BOX 1 -->
+        <div class="overview-box" data-js="card-info-box">
+
+          <div class="box-section-1" data-js="page-text">
+            <h3>Retweets</h3>
+            <img src="./images/icon-twitter.svg" alt="twitter-icon">
+          </div>
+
+          <div class="box-section-2">
+            <h3 class="overview-box-number" data-js="dark-mode-text">117</h3>
+            <p class="green medium-width"><img src="./images/icon-up.svg" alt="icon-up">303%</p>
+          </div>
+
+        </div>
+
+        <!-- *** TWITTER BOX 2 *** -->
+        <div class="overview-box" data-js="card-info-box">
+
+          <div class="box-section-1" data-js="page-text">
+            <h3>Likes</h3>
+            <img src="./images/icon-twitter.svg" alt="twitter-icon">
+          </div>
+
+          <div class="box-section-2">
+            <h3 class="overview-box-number" data-js="dark-mode-text">507</h3>
+            <p class="green medium-width"><img src="./images/icon-up.svg" alt="icon-up">553%</p>
+          </div>
+        </div>
+
+        <!-- *** YOUTUBE BOX 1 *** -->
+        <div class="overview-box" data-js="card-info-box">
+
+          <div class="box-section-1" data-js="page-text">
+            <h3>Likes</h3>
+            <img src="./images/icon-youtube.svg" alt="youtube-icon">
+          </div>
+
+          <div class="box-section-2">
+            <h3 class="overview-box-number" data-js="dark-mode-text">107</h3>
+            <p class="red small-width"><img src="./images/icon-down.svg" alt="icon-down">19%</p>
+          </div>
+        </div>
+
+        <!-- *** YOUTUBE BOX 2 *** -->
+        <div class="overview-box" data-js="card-info-box">
+
+          <div class="box-section-1" data-js="page-text">
+            <h3>Total Views</h3>
+            <img src="./images/icon-youtube.svg" alt="youtube-icon">
+          </div>
+
+          <div class="box-section-2">
+            <h3 class="overview-box-number" data-js="dark-mode-text">1407</h3>
+            <p class="red small-width"><img src="./images/icon-down.svg" alt="icon-down">12%</p>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Created by <a href="https://github.com/carlosr-lotus" target="_blank">Carlos R. Lotus</a>.
+      </div>
+    </footer>
+
+    <!-- Link to Javascript file(s) -->
+    <script src="./javascript/dark-mode.js"></script>
+  </div>
+</body>
+
+</html>

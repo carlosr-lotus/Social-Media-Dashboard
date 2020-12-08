@@ -1,0 +1,444 @@
+:root {
+    /* ***** COLORS ***** */
+    /* PRIMARY */
+    --Lime-Green: hsl(163, 72%, 41%);
+    --Bright-Red: hsl(356, 69%, 56%);
+
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram: linear-gradient(45deg, #fdc468, #df4996);
+    --YouTube: hsl(348, 97%, 39%);
+
+    /* Main Dark Theme */
+    --Toggle-Dark: linear-gradient(hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+
+    /* Dark Theme ITEMS */
+    /* Background */
+    --Very-Dark-Blue: hsl(230, 17%, 14%);
+    /* Top Background Pattern */
+    --Very-Dark-Blue: hsl(232, 19%, 15%);
+    /* Card Background */
+    --Dark-Desaturated-Blue: hsl(228, 28%, 20%);
+    /* Text */
+    --Desaturated-Blue: hsl(228, 34%, 66%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Main Light Theme */
+    --Toggle-Light: hsl(230, 22%, 74%);
+
+    /* Light Theme ITEMS */
+    /* Background */
+    --Light-Background: hsl(0, 0%, 100%);
+    /* Top Background Pattern */
+    --Very-Pale-Blue: hsl(225, 100%, 98%);
+    /* Card Background */
+    --Light-Grayish-Blue: hsl(227, 47%, 96%);
+    /* Text */
+    --Dark-Grayish-Blue: hsl(228, 12%, 44%);
+    --Very-Dark-Blue: hsl(230, 17%, 14%);
+
+    /* Setting 10px = 1rem */
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter',
+        sans-serif;
+
+    transition: .5s;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    width: 90vw;
+}
+
+/* ***** HEADER ***** */
+header {
+    margin: 2.1rem 0 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--Very-Dark-Blue);
+}
+
+header p {
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    color: var(--Dark-Grayish-Blue);
+}
+
+/* Line ONLY AVAILABLE for mobile screen sizes */
+.crossline {
+    border-top: 1px solid var(--Dark-Grayish-Blue);
+    margin: 1.5rem 0 1rem;
+}
+
+/* Dark/Light Mode Toggle Button */
+.dark-mode-container {
+    margin: 0rem 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-container {
+    background-color: grey;
+    height: 2.2rem;
+    width: 5rem;
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition: 1s;
+}
+
+.toggle-ball {
+    background-color: #fff;
+    height: 1.6rem;
+    width: 1.6rem;
+
+    border-radius: 10px;
+
+    top: 3.9px;
+    left: 30px;
+
+    position: absolute;
+    transition: 1s;
+}
+
+.toggle-container.active {
+    background: linear-gradient(to left, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+.toggle-container.active>.toggle-ball {
+    left: 5px;
+}
+
+/* ***** MAIN ***** */
+main {
+    margin: 3rem 0rem;
+}
+
+.card-info-container {
+    margin-bottom: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Different colors for social media borders [facebook, twitter, instagram, youtube] */
+.card-info,
+.facebook-border {
+    /* Facebook Top Border Color */
+    border-top: 5px solid var(--Facebook);
+    border-radius: 5px;
+
+    background-color: var(--Light-Grayish-Blue);
+
+    color: var(--Dark-Grayish-Blue);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 185px;
+    width: 100%;
+    margin: 1.2rem;
+}
+
+.twitter-border {
+    /* Twitter Top Border Color */
+    border-top: 5px solid var(--Twitter);
+}
+
+.instagram-border {
+    /* Instagram Top Border Color */
+    /* border: 5px solid transparent; */
+    border-width: 5px;
+    border-style: solid;
+
+    /* border-image-source: linear-gradient(45deg, #fdc468, #df4996) 100%; */
+    -webkit-border-image: -webkit-linear-gradient(45deg, #fdc468, #df4996) 100% 0 100% 0/5px 0 0px 0 stretch;
+    border-image: linear-gradient(45deg, #fdc468, #df4996) 100% 0 100% 0/6px 0 0px 0 stretch;
+    -webkit-border-image-slice: 1;
+    border-image-slice: 1;
+    border-image-repeat: none;
+}
+
+.youtube-border {
+    border-top: 5px solid var(--YouTube);
+}
+
+.card-info h2 {
+    color: var(--Very-Dark-Blue);
+    font-size: 4.8rem;
+}
+
+.card-info span {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.card-info .green,
+.red {
+    width: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    color: var(--Lime-Green);
+}
+
+/* Red Color for negative */
+.red {
+    color: var(--Bright-Red);
+}
+
+.user-info {
+    width: 83px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.instagram-user-info {
+    width: 105px;
+}
+
+/* ***** OVERVIEW MAIN SECTION ***** */
+.overview-header {
+    width: 99%;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.overview-container {
+    color: var(--Dark-Grayish-Blue);
+}
+
+.card-info:hover,
+.overview-box:hover {
+    cursor: pointer;
+    filter: brightness(.9);
+}
+
+.overview-container>h2 {
+    font-size: 2.4rem;
+    margin: 2.5rem 0;
+}
+
+/* Info Box */
+.overview-box {
+    padding: .5rem 2.8rem;
+    margin: 1.8rem auto .5rem;
+    width: 100%;
+    height: 150px;
+
+    border-radius: 5px;
+    background-color: var(--Light-Grayish-Blue);
+
+    font-size: 1.2rem;
+}
+
+.box-section-1,
+.box-section-2 {
+    height: 50%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* overview-box content */
+.overview-box-number {
+    color: var(--Very-Dark-Blue);
+    font-size: 4rem;
+}
+
+.overview-box .green,
+.overview-box .red {
+    width: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--Lime-Green);
+}
+
+/* The code below is used for small size widths when displaying numbers inside box = 19% */
+.overview-box .small-width {
+    width: 40px;
+}
+
+/* The code below is used for medium size widths when displaying numbers inside box = 303% */
+.overview-box .medium-width {
+    width: 51px;
+}
+
+/* The code below is used for greater widths when displaying numbers inside box = 2257% */
+.overview-box .greater-width {
+    width: 60px;
+}
+
+.overview-box .red {
+    color: var(--Bright-Red);
+}
+
+.overview-box .box-section-2 p {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* ***** FOOTER ***** */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* CSS CODE FOR ACTIVE DARK MODE */
+.dark-background {
+    background-color: var(--Very-Dark-Blue);
+}
+
+.header-main .white-text,
+.card-info .white-text,
+.box-section-2 .white-text,
+.white-text {
+    color: var(--White);
+}
+
+.dark-mode-bg {
+    background-color: var(--Dark-Desaturated-Blue);
+}
+
+.dark-mode-text {
+    color: var(--Desaturated-Blue);
+}
+
+/* CSS CODE FOR RESPONSIVE WEBSITE - TABLET */
+@media(min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .card-info-container {
+        width: 100%;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .overview-container {
+        width: 100%;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+}
+
+/* CSS CODE FOR RESPONSIVE WEBSITE - DESKTOP */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+        width: 90%;
+    }
+
+    /* Header */
+    header {
+        margin-top: 2rem;
+        padding: 1.6rem;
+        flex-direction: row;
+        width: 100%;
+
+    }
+
+    .crossline {
+        display: none;
+    }
+
+    .header-main {
+        width: 70%;
+    }
+
+    .dark-mode-container {
+        margin: 0rem auto;
+        width: 30%;
+
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .dark-mode-container p {
+        margin-right: 1.2rem;
+        margin-bottom: .1rem;
+    }
+
+    .toggle-ball {
+        top: 2.5px;
+    }
+
+    /* MAIN */
+    .card-info-container {
+        margin-bottom: 3rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .overview-container {
+        width: 100%;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    .overview-box {
+        width: 95%;
+    }
+
+}
